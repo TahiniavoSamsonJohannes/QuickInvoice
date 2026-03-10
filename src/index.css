@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f9fafb;
+}
+
+/* Custom styles for the table */
+.invoice-table th:first-child { border-top-left-radius: 0; }
+.invoice-table th:last-child { border-top-right-radius: 0; }
+
+@keyframes popup {
+  0% { transform: scale(0.9); opacity: 0; }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animate-popup {
+  animation: popup 0.3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.hide-on-screen {
+  display: none;
+}
+.is-exporting .hide-on-screen {
+  display: flex;
+}
+@media print {
+  .hide-on-screen {
+    display: flex;
+  }
+}
+
+.show-on-export-inline {
+  display: none;
+}
+.is-exporting .show-on-export-inline {
+  display: inline !important;
+}
+@media print {
+  .show-on-export-inline {
+    display: inline !important;
+  }
+}
+
+/* Responsive adjustments for exact export match */
+.invoice-box {
+  padding: 0.75rem;
+}
+.invoice-header-title {
+  font-size: 1.15rem;
+}
+.invoice-header-date {
+  font-size: 0.75rem;
+}
+.invoice-table th, .invoice-table td {
+  padding: 0.35rem 0.15rem;
+  font-size: 8px;
+  word-break: break-word;
+}
+.totals-text {
+  font-size: 10px;
+  padding: 0.35rem 0.25rem;
+}
+
+@media (min-width: 400px) {
+  .invoice-table th, .invoice-table td { font-size: 10px; padding: 0.4rem 0.25rem; }
+  .totals-text { font-size: 12px; }
+}
+
+@media (min-width: 640px) {
+  .invoice-box { padding: 2rem; }
+  .invoice-header-title { font-size: 1.875rem; }
+  .invoice-header-date { font-size: 1rem; }
+  .invoice-table th, .invoice-table td { padding: 0.5rem 0.75rem; font-size: 14px; }
+  .totals-text { font-size: 16px; padding: 0.5rem 1rem; }
+}
+
+.is-exporting {
+  width: 900px !important;
+  max-width: none !important;
+  padding: 2rem !important;
+}
+.is-exporting .invoice-header-title { font-size: 1.875rem !important; }
+.is-exporting .invoice-header-date { font-size: 1rem !important; }
+.is-exporting .invoice-table th, .is-exporting .invoice-table td { 
+  padding: 0.5rem 0.75rem !important; 
+  font-size: 14px !important; 
+}
+.is-exporting .totals-text { font-size: 16px !important; padding: 0.5rem 1rem !important; }
+@media print {
+  .show-on-export-inline {
+    display: inline !important;
+  }
+}
