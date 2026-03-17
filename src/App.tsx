@@ -11,28 +11,7 @@ type Item = {
   quantity: number;
 };
 
-const initialItems: Item[] = [
-  { id: 'ljlk1', no: 1, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk2', no: 2, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk3', no: 3, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk4', no: 4, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk5', no: 5, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk6', no: 6, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk7', no: 7, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk8', no: 8, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk9', no: 9, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk10', no: 10, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk11', no: 11, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk12', no: 12, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk13', no: 13, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk14', no: 14, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk15', no: 15, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk16', no: 16, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk17', no: 17, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk18', no: 18, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk19', no: 19, description: 'Banane', price: 500, quantity: 2 },
-  { id: 'ljlk20', no: 20, description: 'Banane', price: 500, quantity: 2 },
-];
+const initialItems: Item[] = [];
 
 function App() {
   const [items, setItems] = useState<Item[]>(initialItems);
