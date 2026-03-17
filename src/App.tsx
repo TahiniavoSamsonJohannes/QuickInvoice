@@ -11,7 +11,28 @@ type Item = {
   quantity: number;
 };
 
-const initialItems: Item[] = [];
+const initialItems: Item[] = [
+  { id: 'ljlk1', no: 1, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk2', no: 2, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk3', no: 3, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk4', no: 4, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk5', no: 5, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk6', no: 6, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk7', no: 7, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk8', no: 8, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk9', no: 9, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk10', no: 10, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk11', no: 11, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk12', no: 12, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk13', no: 13, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk14', no: 14, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk15', no: 15, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk16', no: 16, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk17', no: 17, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk18', no: 18, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk19', no: 19, description: 'Banane', price: 500, quantity: 2 },
+  { id: 'ljlk20', no: 20, description: 'Banane', price: 500, quantity: 2 },
+];
 
 function App() {
   const [items, setItems] = useState<Item[]>(initialItems);
@@ -318,7 +339,7 @@ function App() {
           </button>
           <button
             onClick={() => handleOpenModal()}
-            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-2 py-1.5 sm:px-4 sm:py-2 rounded-md font-medium transition-colors shadow-sm"
+            className="fixed bottom-10 right-5 shadow-4xl sm:flex sm:items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-2 py-1.5 sm:px-4 sm:py-2 rounded-md font-medium transition-colors sm:shadow-sm"
           >
             <Plus size={18} />
             <span className="hidden sm:inline">Ajouter un article</span>
@@ -379,7 +400,7 @@ function App() {
                   `}
                   >
                     <td className="py-2 px-3 font-bold text-center text-gray-900 align-middle">{item.no}</td>
-                    <td className="py-2 px-3 text-left text-gray-800 align-middle">{item.description}</td>
+                    <td className="py-2 px-3 text-left  text-gray-800 align-middle">{item.description}</td>
                     <td className="py-2 px-3 text-center font-medium text-gray-700 align-middle">
                       {formatNumber(item.price)}
                     </td>
@@ -432,7 +453,7 @@ function App() {
             </div>
             <div className="flex bg-[#0b65ff] text-white overflow-hidden w-full sm:w-75 mt-2 rounded-none">
               <div className="py-2 px-4 sm:py-3 sm:px-6 font-bold flex-1 flex items-center">TOTAL</div>
-              <div className="py-2 px-4 sm:py-3 sm:px-6 font-bold text-center text-base sm:text-lg align-middle">
+              <div className="py-2 px-4 sm:py-3 sm:px-6 font-bold text-center sm:text-lg align-middle">
                 {formatNumber(grandTotal)}
               </div>
             </div>

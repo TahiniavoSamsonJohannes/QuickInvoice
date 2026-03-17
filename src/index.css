@@ -84,9 +84,14 @@ body {
 .is-exporting .invoice-header-date { font-size: 1rem !important; }
 .is-exporting .invoice-table th, .is-exporting .invoice-table td { 
   padding: 0.5rem 0.75rem !important; 
-  font-size: 14px !important; 
+  font-size: 18px !important;
 }
-.is-exporting .totals-text { font-size: 16px !important; padding: 0.5rem 1rem !important; }
+
+.invoice-table th {
+  font-weight: 700 !important;
+}
+
+.is-exporting .totals-text { font-size: 18px !important; font-weight: 700 !important; padding: 0.5rem 1rem !important; }
 @media print {
   .show-on-export-inline {
     display: inline !important;
